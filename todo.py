@@ -31,7 +31,8 @@ def print_list(list):
 
 
 def show(list):
-  print(list[1])
+  index = int(input("What you want to show?\n"))
+  print(list[index])
   # https://www.w3schools.com/python/python_lists_access.asp
   pass
 
@@ -45,7 +46,7 @@ while True:
     print_list(list)
   elif choice == 2:
     index = int(input("What you want to remove?\n"))
-    list.remove(index)
+    list.pop(index)
     print_list(list)
   elif choice == 3:
     clear(list)
