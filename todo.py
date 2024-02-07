@@ -16,16 +16,22 @@ def remove(list, index):
 
 
 def clear(list):
+  list.clear()
+  print(list)
   # https://www.w3schools.com/python/python_lists_remove.asp
   pass
 
 
 def print_list(list):
+  print("Your list is:")
+  for x in list:
+    print(x)
   # https://www.w3schools.com/python/python_lists_loop.asp
   pass
 
 
 def show(list):
+  print(list[1])
   # https://www.w3schools.com/python/python_lists_access.asp
   pass
 
@@ -35,11 +41,11 @@ while True:
   choice = int(input("1. Add\n2. Remove\n3. Clear\n4. Print list\n5. Show item by index"))
   if choice == 1:
     item = input("What you want to add?\n")
-    add(list, item)
+    list.append(item)
     print_list(list)
   elif choice == 2:
     index = int(input("What you want to remove?\n"))
-    remove(list, index)
+    list.remove(index)
     print_list(list)
   elif choice == 3:
     clear(list)
